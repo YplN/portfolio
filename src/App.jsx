@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import './App.css';
+import DBLP from "./DBLP.jsx";
 import ReactLogo from "./ReactLogo.jsx";
 import useHover from "./hook/useHover.js";
 
@@ -245,19 +246,29 @@ const AboutMe = () =>{
   const isHover = useHover(imgRef);
   return (
     <section className="vintage" id="aboutMe"> 
+<div className="two-columns">
+  <div className="column" id="presentations">
       <h2 className="title">About me</h2>
+  <p>I wasn't always a web developer. Previously, I did a PhD in Graph Theory (see below a list of my publications).</p>
 
-      Blabla who I am, I was not always web developer blabla, picture with Pubius Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa, quisquam molestiae commodi dolorem quaerat, sed perspiciatis neque unde ipsam voluptates ullam totam id cupiditate officiis natus necessitatibus soluta vitae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur alias inventore magnam illo, sed, ducimus quidem optio recusandae nulla officiis, sint nostrum voluptas architecto ratione incidunt obcaecati corporis adipisci molestiae?
-          <img className="vintage light" ref={imgRef} src={isHover? "img/about_me/5_ottobre.png": "img/about_me/pubius.png"}/>
+<p>In 2019, I moved to Orléans, France and started a new position as a Temporary Lecturer at the University. During the COVID-19 Pandemic, we -the teachers- had to quickly adapt our working habits to remote teaching. This led me to try to find solutions to allow my students the best possible learning experience technology allowed us. I therefore started to develop in semi-autodidact simple websites, for example to help students to manipulate some data structures.</p>
 
+<p>Then, during my postdoctoral position in Prague, I started to develop with my friend Lucas Isenmann a website to allow graph-theory researchers and teacher to draw graph collaboratively : GraCoOn was born.</p>
+
+<p> Flash forward, I am now in Rome, I have a wonderful dog named Pùa, and I am looking for a job position as a web developer.</p>
+{/* <p>At the time, I was in charge of teaching the basics of programming to non-computer science students. In my search for a programming language suited to this course (i.e. demanding, but not too complex, while still being able to do cool things quickly), I came across the Processing foundation, and in particular P5.js. I immediately fell in love with this library, which perfectly met my expectations. 
+</p> */}
+
+{/* <p>I then realize I could quickly code some very simple websites to help my computer-science students to manipulate some data structures.</p> */}
+
+      </div>
+  <div className="column">
+          <img className="" ref={imgRef} src={isHover? "img/about_me/5_ottobre.png": "img/about_me/pubius.png"}/>
+          </div>
+          </div>
     <div id="research">
         <h3 className="subtitle">Research</h3>
-        <TempDiv>
-          Some of my research (parse DBLP)
-        </TempDiv>
-        <TempDiv height="50px">
-          My thesis
-        </TempDiv>
+      	<DBLP />
       </div>
     </section>);
 }
@@ -282,6 +293,7 @@ function App() {
     <>
       <NavBar/>
       <main>
+        {/* <DBLP/> */}
         <LandingPage/>
         <Expertise/>
         <Projects/>
