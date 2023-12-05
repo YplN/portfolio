@@ -221,7 +221,7 @@ const Projects = () =>{
   <source src="base.ogg" type="video/ogg"/>
 Your browser does not support the video tag.
 </video> 
-<img className="vintage"  src={"/img/gracoon/connected.png"}/>
+<img className="vintage"  src={"img/gracoon/connected.png"}/>
         </TempDiv>
       </div>
       
@@ -248,7 +248,7 @@ const AboutMe = () =>{
       <h2 className="title">About me</h2>
 
       Blabla who I am, I was not always web developer blabla, picture with Pubius Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique, ipsa, quisquam molestiae commodi dolorem quaerat, sed perspiciatis neque unde ipsam voluptates ullam totam id cupiditate officiis natus necessitatibus soluta vitae. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aspernatur alias inventore magnam illo, sed, ducimus quidem optio recusandae nulla officiis, sint nostrum voluptas architecto ratione incidunt obcaecati corporis adipisci molestiae?
-          <img className="vintage light" ref={imgRef} src={isHover? "/img/about_me//5_ottobre.png": "/img/about_me/pubius.png"}/>
+          <img className="vintage light" ref={imgRef} src={isHover? "img/about_me/5_ottobre.png": "img/about_me/pubius.png"}/>
 
     <div id="research">
         <h3 className="subtitle">Research</h3>
