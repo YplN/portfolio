@@ -39,8 +39,8 @@ const NavBar = () => {
 	return (
 		<>
 			<nav ref={navRef}>
-				<ReactLogo id="logo" size={50} stroke={"#000"} />
-
+				{/* <ReactLogo id="logo" size={50} stroke={"#000"} /> */}
+				<img src="img/logo_light.svg" id="logo" />
 				<div className="links">
 					{/* <a className="nav-item">
       Home
@@ -87,7 +87,7 @@ const ExpertiseBar = ({ name, color }) => {
 
 const Expertise = () => {
 	return (
-		<section className="vintage" id="expertise">
+		<section className="" id="expertise">
 			{" "}
 			<h2 className="title"> Expertise</h2>
 			<div className="expertise-container">
@@ -168,7 +168,7 @@ const LandingPage = () => {
         </span>
       </div> */}
 					<div>I'm Jocelyn.</div>
-					<div className="subtext"> I'm web developer.</div>
+					<div className="subtext"> I'm a web developer.</div>
 				</h1>
 				<TempDiv height="40px"> GitHub link, LinkedIn </TempDiv>
 			</div>
@@ -229,14 +229,14 @@ const TempDiv = ({ width = "100%", height = "300px", children }) => {
 	);
 };
 
-const GraCoOn = () => {
+const GraCoOnTitle = () => {
 	const [advance, setAdvance] = useState({
 		gra: 0,
 		co: 0,
 		on: 0,
 	});
 
-	const INIT_DELAY = 70;
+	const INIT_DELAY = 100;
 
 	useEffect(() => {
 		const advanceInterval = setInterval(() => {
@@ -275,14 +275,14 @@ const GraCoOn = () => {
 
 	const blink = (a, i) => {
 		// return advance < 100 ? "_" : Math.floor(advance / 30) % 2 === 0 ? "_" : " ";
-		if (a < INIT_DELAY) {
-			return "";
-		}
+		// if (a < INIT_DELAY) {
+		// 	return "";
+		// }
 
-		const show = a < INIT_DELAY + 100 || Math.floor(a / 30) % 2 === 1;
+		const hide = a < INIT_DELAY - 30 || Math.floor(a / 30) % 2 === 1;
 		return (
 			<span
-				className={`blink ${show ? "" : "hide"}`}
+				className={`blink ${hide ? "hide" : ""}`}
 				style={{
 					borderLeft: `3px solid ${
 						i == 1 ? "#e83333" : i == 2 ? "#6d6dc2" : "#41bc41"
@@ -299,34 +299,85 @@ const GraCoOn = () => {
 	};
 
 	return (
-		<div id="gracoon">
-			<div className="project-title">
-				{`Gra${subString("ph ", advance.gra)}`}
-				{blink(advance.gra, 1)}
-				{`Co${subString("llaborative ", advance.co)}`}
-				{blink(advance.co, 2)}
-				{`On${subString("line ", advance.on)}`}
-				{blink(advance.on, 3)}
-			</div>
+		<div className="project-title">
+			{`Gra${subString("ph ", advance.gra)}`}
+			{blink(advance.gra, 1)}
+			{`Co${subString("llaborative ", advance.co)}`}
+			{blink(advance.co, 2)}
+			{`On${subString("line!", advance.on)}`}
+			{blink(advance.on, 3)}
 		</div>
 	);
 };
 
+const Gracoon = () => {
+	return (
+		<>
+			<GraCoOnTitle />
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. At illo,
+				repudiandae dignissimos assumenda, amet labore asperiores, facilis aut
+				adipisci deserunt iusto maiores excepturi dolor cum quia vel distinctio
+				tempore perferendis?
+			</p>
+
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. At illo,
+				repudiandae dignissimos assumenda, amet labore asperiores, facilis aut
+				adipisci deserunt iusto maiores excepturi dolor cum quia vel distinctio
+				tempore perferendis? Lorem ipsum, dolor sit amet consectetur adipisicing
+				elit. At illo, repudiandae dignissimos assumenda, amet labore
+				asperiores, facilis aut adipisci deserunt iusto maiores excepturi dolor
+				cum quia vel distinctio tempore perferendis?
+			</p>
+
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. At illo,
+				repudiandae dignissimos assumenda, amet labore asperiores, facilis aut
+				adipisci deserunt iusto maiores excepturi dolor cum quia vel distinctio
+				tempore perferendis?
+			</p>
+
+			<video width="640" height="240" autoPlay muted loop>
+				<source src="base.mp4" type="video/mp4" />
+				<source src="base.ogg" type="video/ogg" />
+				Your browser does not support the video tag.
+			</video>
+
+			<img className="vintage" src={"img/gracoon/connected.png"} />
+		</>
+	);
+};
+
+const TwoColumns = ({ left, right }) => {
+	return (
+		<div className="two-columns">
+			<div className="column left">{left}</div>
+			<div className="column right">{right}</div>
+		</div>
+	);
+};
+
+const ImgColumn = ({ src, onHover = () => {} }) => {
+	const imgRef = useRef(null);
+	const isHover = useHover(imgRef);
+
+	useEffect(() => {
+		if (isHover) {
+			onHover();
+		}
+	}, [isHover]);
+
+	return <img ref={imgRef} src={src} />;
+};
 const Projects = () => {
 	return (
-		<section className="vintage" id="projects">
+		<section className="" id="projects">
 			<h2 className="title">Projects</h2>
-			<div id="featured">
-				<h3 className="subtitle">Featured project</h3>
-				<GraCoOn />
-
-				<video width="640" height="240" autoPlay muted>
-					<source src="base.mp4" type="video/mp4" />
-					<source src="base.ogg" type="video/ogg" />
-					Your browser does not support the video tag.
-				</video>
-				<img className="vintage" src={"img/gracoon/connected.png"} />
-			</div>
+			<TwoColumns
+				left={<Gracoon />}
+				right={<ImgColumn src={"img/gracoon/gracoon_gen.png"} />}
+			/>
 
 			<div id="wip">
 				<h3 className="subtitle">Work in Progress</h3>
@@ -335,67 +386,63 @@ const Projects = () => {
 
 			<div id="others">
 				<h3 className="subtitle">Others</h3>
-				<TempDiv />
+				<TempDiv> Visual Stack</TempDiv>
 			</div>
 		</section>
 	);
 };
 
+const Journey = () => {
+	return (
+		<>
+			<h3 className="subtitle">Journey</h3>
+			<p>
+				I wasn't always a web developer. Previously, I did a{" "}
+				<strong>PhD in Graph Theory</strong> (see below a list of my
+				publications).
+			</p>
+
+			<p>
+				In 2019, I moved to Orléans, France and started a new position as a{" "}
+				<strong>Temporary Lecturer</strong> at the University. During the
+				COVID-19 Pandemic, we -the teachers- had to quickly adapt our working
+				habits to remote teaching. This led me to try to find solutions to allow
+				my students the best possible learning experience technology allowed us.
+				I therefore started to develop in semi-autodidact{" "}
+				<strong>simple webpages</strong> to help students, for example to
+				manipulate some data structures.
+			</p>
+
+			<p>
+				Then, during my postdoctoral position in Prague, I started to develop
+				with my friend Lucas Isenmann a website to allow graph-theory
+				researchers and teacher to draw graph collaboratively:{" "}
+				<strong>GraCoOn was born.</strong>
+			</p>
+
+			<p>
+				{" "}
+				Flash forward, I am now in Rome, I have a wonderful dog named Pùa, and{" "}
+				<strong>I am looking for a job position as a web developer.</strong>
+			</p>
+			{/* <p>At the time, I was in charge of teaching the basics of programming to non-computer science students. In my search for a programming language suited to this course (i.e. demanding, but not too complex, while still being able to do cool things quickly), I came across the Processing foundation, and in particular P5.js. I immediately fell in love with this library, which perfectly met my expectations. 
+</p> */}
+		</>
+	);
+};
 const AboutMe = () => {
 	const imgRef = useRef(null);
 	const isHover = useHover(imgRef);
 	return (
 		<section className="" id="aboutMe">
-			<div className="two-columns">
-				<div className="column" id="presentations">
-					<h2 className="title">
-						<span className="fancy">About me</span>
-					</h2>
-					<p>
-						I wasn't always a web developer. Previously, I did a{" "}
-						<strong>PhD in Graph Theory</strong> (see below a list of my
-						publications).
-					</p>
+			<h2 className="title">
+				<span className="fancy">About me</span>
+			</h2>
 
-					<p>
-						In 2019, I moved to Orléans, France and started a new position as a{" "}
-						<strong>Temporary Lecturer</strong> at the University. During the
-						COVID-19 Pandemic, we -the teachers- had to quickly adapt our
-						working habits to remote teaching. This led me to try to find
-						solutions to allow my students the best possible learning experience
-						technology allowed us. I therefore started to develop in
-						semi-autodidact <strong>simple websites</strong>, for example to
-						help students to manipulate some data structures.
-					</p>
-
-					<p>
-						Then, during my postdoctoral position in Prague, I started to
-						develop with my friend Lucas Isenmann a website to allow
-						graph-theory researchers and teacher to draw graph collaboratively:{" "}
-						<strong>GraCoOn was born.</strong>
-					</p>
-
-					<p>
-						{" "}
-						Flash forward, I am now in Rome, I have a wonderful dog named Pùa,
-						and{" "}
-						<strong>I am looking for a job position as a web developer.</strong>
-					</p>
-					{/* <p>At the time, I was in charge of teaching the basics of programming to non-computer science students. In my search for a programming language suited to this course (i.e. demanding, but not too complex, while still being able to do cool things quickly), I came across the Processing foundation, and in particular P5.js. I immediately fell in love with this library, which perfectly met my expectations. 
-</p> */}
-
-					{/* <p>I then realize I could quickly code some very simple websites to help my computer-science students to manipulate some data structures.</p> */}
-				</div>
-				<div className="column">
-					<img
-						className=""
-						ref={imgRef}
-						src={
-							isHover ? "img/about_me/5_ottobre.png" : "img/about_me/pubius.png"
-						}
-					/>
-				</div>
-			</div>
+			<TwoColumns
+				left={<Journey />}
+				right={<ImgColumn src="img/about_me/pubius.png" />}
+			/>
 			{/* <div style={{width:"100%", height:"2px", background:"#222"}}></div>  */}
 			<div id="research">
 				<h3 className="subtitle">Research</h3>
