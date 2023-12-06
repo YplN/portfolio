@@ -1,5 +1,6 @@
+import { useRef } from "react";
+import useHover from "../../hook/useHover.js";
 import ReactLogo from "../Generic/ReactLogo.jsx";
-import TempDiv from "../Generic/TempDiv.jsx";
 import Card from "./Cards.jsx";
 
 import "./Expertise.css";
@@ -32,10 +33,13 @@ const LANGUAGES = [
 ];
 
 const Expertise = () => {
+	const ref = useRef(null);
+	const isHover = useHover(ref);
+
 	return (
 		<section className="" id="expertise">
 			<h2 className="title"> Expertise</h2>
-			<div className="expertise-container">
+			<div className="expertise-container" ref={ref}>
 				{LANGUAGES.map((e) => (
 					<Card
 						key={e.id}
@@ -45,8 +49,19 @@ const Expertise = () => {
 						label={e.label}
 					/>
 				))}
+				<div id="message"> HOVER TO REVEAL ! </div>
 			</div>
-			<TempDiv>I can't note my expertise blbalabla</TempDiv>
+			{
+				<div id="secret-div" className={isHover ? "show" : ""}>
+					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro sequi
+					laboriosam cupiditate! Libero temporibus, veritatis, recusandae
+					voluptatibus deleniti vel distinctio, facilis aut voluptates
+					consequatur iste ad blanditiis id ex quas. Lorem ipsum dolor sit amet,
+					consectetur adipisicing elit. Aspernatur eveniet aut ut delectus ipsam
+					itaque eius quam eos facilis nesciunt quae obcaecati ab mollitia,
+					veniam sequi recusandae sapiente sunt dolores.
+				</div>
+			}
 		</section>
 	);
 };

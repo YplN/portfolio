@@ -36,6 +36,35 @@
 	display: flex;
 	gap: 1rem;
 	justify-content: center;
+	position: relative;
+}
+
+.expertise-container:hover #message {
+	opacity: 0;
+}
+
+.expertise-container:hover .card-bottom {
+	/* filter: blur(0px); */
+	opacity: 1;
+}
+
+#message {
+	opacity: 1;
+	/* --color : red; */
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 50px;
+	font-family: var(--code-font);
+	color: var(--dark-color);
+	background-color: var(--light-color);
+	border-top: 5px solid var(--dark-color);
+	border-bottom: 5px solid var(--dark-color);
+	cursor: default;
+	transition: 0.1s ease-in;
 }
 
 .card {
@@ -43,7 +72,7 @@
 	/* border-radius: 10px; */
 	min-width: 150px;
 	max-width: calc(max(200px, 20%));
-	min-height: 200px;
+	min-height: 120px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
@@ -79,6 +108,10 @@
 	/* flex-direction: row; */
 	/* justify-content: space-between; */
 	width: 100%;
+	transition: 0.2s ease-in-out;
+	transition-delay: 0.1s;
+	opacity: 0;
+	/* filter: blur(50px); */
 }
 
 .card-top {
@@ -91,7 +124,7 @@
 	/* flex-direction: column; */
 	text-align: left;
 	font-size: 20px;
-	font-family: JetBrains Mono, monospace;
+	font-family: var(--code-font);
 }
 
 .card-logo {
@@ -116,4 +149,13 @@
 .card-bottom-text {
 	font-weight: 700;
 	letter-spacing: 0.5px;
+}
+
+#secret-div {
+	opacity: 0;
+	color: var(--dark-color);
+}
+
+#secret-div.show {
+	opacity: 1;
 }

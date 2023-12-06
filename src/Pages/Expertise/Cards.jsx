@@ -41,7 +41,7 @@ export const Card = ({ id, label, color, logo, link }) => {
 					<span className="card-label"> {label} </span>
 				</div>
 			</div>
-			<div className="card-body">{logo}</div>
+			{/* <div className="card-body">{logo}</div> */}
 			<a href={link}>
 				<div className="card-bottom">
 					<ExpertiseBar name={id} color={color} />

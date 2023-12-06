@@ -5,6 +5,8 @@
 	--dark-color: #333;
 	--blue: #30dcff;
 	--orange: #ff9330;
+	--green: #8ee944;
+	--code-font: JetBrains Mono, monospace;
 }
 
 body {
@@ -135,6 +137,7 @@ nav a:hover:not(.active) {
 	/* width: -moz-fit-content;
 	width: fit-content; */
 	margin: 20px auto;
+	/* margin-bottom: 100px; */
 	width: auto;
 	/* border-radius: 20px; */
 	box-shadow: var(--dark-color) 5px 5px 0px;
@@ -159,10 +162,6 @@ section {
 	margin-bottom: 50px;
 	/* border-radius: 30px; */
 	/* padding: 0 2em; */
-}
-
-section > * {
-	/* max-width: 90%; */
 }
 
 section#expertise {
@@ -200,23 +199,30 @@ section#aboutMe {
 	width: 100%;
 }
 
+/* 
 .column p {
 	margin: 0.5em 0;
-}
+} */
 
 .column img {
 	width: 100%;
 	/* border-top-right-radius: 8px; */
 }
 
-.column .title {
-	/* padding: 1em 0; */
-	/* margin: 30px auto; */
-}
-
 .fancy {
 	position: relative;
 	white-space: nowrap;
+}
+
+.column .text {
+	font-size: 18px;
+	font-weight: 400;
+	color: var(--dark-color);
+	padding: 0 5em;
+	text-align: justify;
+	/* height: 0; */
+	/* padding-bottom: 50%; */
+	line-height: 24px;
 }
 
 .fancy:after {
@@ -239,4 +245,16 @@ section#aboutMe {
 
 #logo {
 	width: 80px;
+}
+
+.skill {
+	/* border: 1px solid ); */
+	/* background-color: var(--new--blue); */
+	/* box-shadow: 3px 3px 0 0 var(--new--titles); */
+	border-radius: 20px;
+	margin-right: 16px;
+	padding: 8px 16px;
+	font-family: var(--code-font);
+	font-size: 16px;
+	display: inline-block;
 }

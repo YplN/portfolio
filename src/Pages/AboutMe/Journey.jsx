@@ -2,7 +2,7 @@ const Journey = () => {
 	return (
 		<>
 			<h3 className="subtitle">Journey</h3>
-			<div id="journey">
+			<div id="journey" className="text">
 				<p>
 					I wasn't always a web developer. Previously, I did a{" "}
 					<strong>PhD in Graph Theory</strong> (see below a list of my
