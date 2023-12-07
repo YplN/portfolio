@@ -3,6 +3,7 @@ import useHover from "../../hook/useHover.js";
 import ReactLogo from "../Generic/ReactLogo.jsx";
 import Card from "./Cards.jsx";
 
+import Section from "../Generic/Section.jsx";
 import "./Expertise.css";
 
 const LANGUAGES = [
@@ -37,7 +38,7 @@ const Expertise = () => {
 	const isHover = useHover(ref);
 
 	return (
-		<section className="" id="expertise">
+		<Section id="expertise">
 			<h2 className="title"> Expertise</h2>
 			<div className="expertise-container" ref={ref}>
 				{LANGUAGES.map((e) => (
@@ -62,7 +63,7 @@ const Expertise = () => {
 					veniam sequi recusandae sapiente sunt dolores.
 				</div>
 			}
-		</section>
+		</Section>
 	);
 };
 

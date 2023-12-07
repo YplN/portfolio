@@ -3,11 +3,12 @@ import TwoColumns from "../Generic/TwoColumns.jsx";
 import DBLP from "./DBLP.jsx";
 import Journey from "./Journey.jsx";
 
+import Section from "../Generic/Section.jsx";
 import "./AboutMe.css";
 
 const AboutMe = () => {
 	return (
-		<section className="" id="aboutMe">
+		<Section id="aboutMe">
 			<h2 className="title">
 				<span className="fancy">About me</span>
 			</h2>
@@ -20,7 +21,7 @@ const AboutMe = () => {
 				<h3 className="subtitle">Research</h3>
 				<DBLP />
 			</div>
-		</section>
+		</Section>
 	);
 };
 

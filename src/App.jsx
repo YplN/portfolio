@@ -2,6 +2,7 @@ import { useRef } from "react";
 import "./App.css";
 import AboutMe from "./Pages/AboutMe/AboutMe.jsx";
 import Expertise from "./Pages/Expertise/Expertise.jsx";
+import Section from "./Pages/Generic/Section.jsx";
 import TempDiv from "./Pages/Generic/TempDiv.jsx";
 import Landing from "./Pages/Landing/Landing.jsx";
 import Projects from "./Pages/Projects/Projects.jsx";
@@ -38,11 +39,11 @@ const NavBar = () => {
 
 const Contact = () => {
 	return (
-		<section className="vintage" id="contact">
+		<Section className="vintage" id="contact">
 			<h2 className="title">Contact me</h2>
 			<TempDiv>blabla let's get in touch</TempDiv>
 			<TempDiv height="50px">links github, linkedin, x</TempDiv>
-		</section>
+		</Section>
 	);
 };
 

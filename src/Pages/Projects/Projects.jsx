@@ -1,4 +1,5 @@
 import ImgColumn from "../Generic/ImgColumn.jsx";
+import Section from "../Generic/Section.jsx";
 import TempDiv from "../Generic/TempDiv.jsx";
 import TwoColumns from "../Generic/TwoColumns.jsx";
 import Gracoon from "./Gracoon.jsx";
@@ -6,7 +7,7 @@ import Gracoon from "./Gracoon.jsx";
 import "./Projects.css";
 const Projects = () => {
 	return (
-		<section className="" id="projects">
+		<Section id="projects">
 			<h2 className="title">Projects</h2>
 			<TwoColumns
 				left={<Gracoon />}
@@ -22,7 +23,7 @@ const Projects = () => {
 				<h3 className="subtitle">Others</h3>
 				<TempDiv> Visual Stack</TempDiv>
 			</div>
-		</section>
+		</Section>
 	);
 };
 
