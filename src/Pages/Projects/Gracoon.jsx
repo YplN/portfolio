@@ -88,62 +88,61 @@ const GraCoOnTitle = () => {
 const Gracoon = () => {
 	return (
 		<>
-			<div id="gracoon">
-				<GraCoOnTitle />
-				<div className="text">
-					<p>
-						<a href="http://gracoon.com" target="_blank">
-							GraCoOn
-						</a>{" "}
-						(short for "<span className="short">Gra</span>ph{" "}
-						<span className="short">Co</span>llaborative{" "}
-						<span className="short">On</span>line") is a platform I developed
-						with my friend{" "}
-						<a href="https://www.lirmm.fr/~isenmann/" target="_blank">
-							Lucas Isenmann
-						</a>
-						. During the pandemic, we were both frustrated by the limited tools
-						available to graph theory researchers for remote work (despite the
-						common practice of collaborating with people from afar in research).
-						While platforms like Miro are great, it's disappointing that they
-						only allow us to "draw" graphs without generating a "real graph."
-						Motivated by this, we initiated the development of{" "}
-						<a href="http://gracoon.com" target="_blank">
-							GraCoOn
-						</a>
-						, enabling users (typically researchers or teachers/students) to
-						collaboratively draw graphs.
-					</p>
-					<p>
-						The significant advantage of storing a real graph is the ability to
-						directly compute parameters for the graph, such as tracking the
-						number of vertices, the diameter, etc. These computations can also
-						extend to subgraphs.
-					</p>
-					<p>
-						And all of this is done collaboratively, no need to sign-in or
-						anything. You go to the website, you share the link to your friends,
-						and you can start. Pretty cool, huh?
-					</p>
+			<GraCoOnTitle />
+			<div className="text">
+				<p>
+					<a href="http://gracoon.com" target="_blank">
+						GraCoOn
+					</a>{" "}
+					(short for "<span className="short">Gra</span>ph{" "}
+					<span className="short">Co</span>llaborative{" "}
+					<span className="short">On</span>line") is a platform I developed with
+					my friend{" "}
+					<a href="https://www.lirmm.fr/~isenmann/" target="_blank">
+						Lucas Isenmann
+					</a>
+					. During the pandemic, we were both frustrated by the limited tools
+					available to graph theory researchers for remote work (despite the
+					common practice of collaborating with people from afar in research).
+					While platforms like Miro are great, it's disappointing that they only
+					allow us to "draw" graphs without generating a "real graph." Motivated
+					by this, we initiated the development of{" "}
+					<a href="http://gracoon.com" target="_blank">
+						GraCoOn
+					</a>
+					, enabling users (typically researchers or teachers/students) to
+					collaboratively draw graphs.
+				</p>
+				<p>
+					The significant advantage of storing a real graph is the ability to
+					directly compute parameters for the graph, such as tracking the number
+					of vertices, the diameter, etc. These computations can also extend to
+					subgraphs.
+				</p>
+				<p>
+					And all of this is done collaboratively, no need to sign-in or
+					anything. You go to the website, you share the link to your friends,
+					and you can start. Pretty cool, huh?
+				</p>
 
-					<TempDiv height="30px"> See full case study... </TempDiv>
-					<div className="skill-bar">
-						<Skill name={"HTML"} fill={"#38ee4b"} color="white" />
-						<Skill name={"CSS"} fill={"#dcaf33"} color="white" />
-						<Skill name={"Typescript"} fill={"#ba83ff"} color="white" />
-						<Skill name={"Node.js"} fill={"#2DA"} color="white" />
-						<Skill name={"UI"} fill={"var(--blue)"} color="white" />
-						<Skill name={"UX"} fill={"var(--green)"} color="white" />
-					</div>
-					<video width="100%" autoPlay muted loop>
-						<source src="base.mp4" type="video/mp4" />
-						<source src="base.ogg" type="video/ogg" />
-						Your browser does not support the video tag.
-					</video>
+				<TempDiv height="30px"> See full case study... </TempDiv>
+
+				<div className="skill-bar">
+					<Skill name={"HTML"} fill={"#38ee4b"} color="white" />
+					<Skill name={"CSS"} fill={"#dcaf33"} color="white" />
+					<Skill name={"Typescript"} fill={"#ba83ff"} color="white" />
+					<Skill name={"Node.js"} fill={"#2DA"} color="white" />
+					<Skill name={"UI"} fill={"var(--blue)"} color="white" />
+					<Skill name={"UX"} fill={"var(--green)"} color="white" />
 				</div>
-
-				{/* <img className="vintage" src={"img/gracoon/connected.png"} /> */}
+				<video width="100%" autoPlay muted loop>
+					<source src="base.mp4" type="video/mp4" />
+					<source src="base.ogg" type="video/ogg" />
+					Your browser does not support the video tag.
+				</video>
 			</div>
+
+			{/* <img className="vintage" src={"img/gracoon/connected.png"} /> */}
 		</>
 	);
 };

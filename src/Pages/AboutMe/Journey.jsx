@@ -1,8 +1,9 @@
 const Journey = () => {
 	return (
 		<>
-			<div id="journey" className="text">
-				<h3 className="subtitle">Journey</h3>
+			{/* <h3 className="subtitle">Journey</h3> */}
+
+			<div className="text">
 				<p>
 					I didn't start as a web developer. Previously, I pursued a{" "}
 					<strong>PhD in Graph Theory</strong> in Montpellier, France (see below
@@ -32,9 +33,6 @@ const Journey = () => {
 					wonderful dog named Pùa, and{" "}
 					<strong>I am actively seeking a web developer position.</strong>
 				</p>
-
-				{/* <p>At the time, I was in charge of teaching the basics of programming to non-computer science students. In my search for a programming language suited to this course (i.e. demanding, but not too complex, while still being able to do cool things quickly), I came across the Processing foundation, and in particular P5.js. I immediately fell in love with this library, which perfectly met my expectations. 
-</p> */}
 			</div>
 		</>
 	);

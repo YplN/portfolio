@@ -14,8 +14,11 @@ const AboutMe = () => {
 			</h2>
 
 			<TwoColumns
+				title="Journey"
 				left={<Journey />}
 				right={<ImgColumn src="img/about_me/pubius.png" />}
+				idLeft={"journey-text"}
+				idRight={"pua-img"}
 			/>
 			<div id="research">
 				<h3 className="subtitle">Research</h3>

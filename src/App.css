@@ -155,7 +155,8 @@ nav a:hover:not(.active) {
 }
 
 .subtitle {
-	font-size: 40px;
+	font-size: 45px;
+	margin: 0.5em 0;
 }
 
 section {
@@ -198,22 +199,65 @@ section#aboutMe {
 	box-shadow: var(--light-color) 5px 5px 0px;
 }
 
+.two-columns-container {
+	display: flex;
+	justify-content: center;
+	position: relative;
+}
+
+.two-columns-title {
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-family: var(--font);
+	font-size: 40px;
+	color: var(--dark-color);
+	background-color: var(--light-color);
+	padding: 0 0.5em;
+	/* -webkit-text-fill-color: transparent;
+	-webkit-text-stroke-width: 2px;
+	text-shadow: 8px 8px #ff1f8f, 20px 20px #000000; */
+	/* -webkit-text-fill-color: var(--light-color); */
+	/* -webkit-text-stroke-color: var(--dark-color); */
+}
+
+.two-columns-title:before {
+	content: " ";
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 50%;
+	background-color: var(--light-color);
+	border: 2px solid var(--dark-color);
+	/* box-shadow: var(--dark-color) 5px 5px 0px; */
+	border-bottom-width: 0;
+	position: absolute;
+	z-index: -1;
+	/* to be below the parent element */
+}
+
 .two-columns {
 	display: flex;
 	flex-direction: row;
 	flex-wrap: nowrap;
 	justify-content: space-around;
+	width: 80%;
+	background-color: var(--light-color);
+	border: 2px solid var(--dark-color);
+	box-shadow: var(--dark-color) 5px 5px 0px;
+	margin-bottom: 50px;
+	padding: 30px 30px;
 }
 
 .column {
-	width: 100%;
-}
-
-.column > div {
+	/* width: 100%; */
+	/* align-self: flex-start; */
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
-	height: 100%;
+	flex-direction: column;
+	flex-wrap: nowrap;
 }
 
 /* 
@@ -222,8 +266,9 @@ section#aboutMe {
 } */
 
 .column img {
-	width: 100%;
+	/* width: 100%; */
 	/* border-top-right-radius: 8px; */
+	max-width: 500px;
 }
 
 .fancy {
@@ -235,11 +280,15 @@ section#aboutMe {
 	font-size: 18px;
 	font-weight: 400;
 	color: var(--dark-color);
-	padding: 0 5em;
+	padding: 0 3em;
 	text-align: justify;
 	/* height: 0; */
 	/* padding-bottom: 50%; */
 	line-height: 24px;
+}
+
+.column img {
+	align-self: center;
 }
 
 .fancy:after {
