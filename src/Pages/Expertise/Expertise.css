@@ -37,10 +37,12 @@
 	gap: 1rem;
 	justify-content: center;
 	position: relative;
+	background-color: inherit;
 }
 
 .expertise-container:hover #message {
 	opacity: 0;
+	z-index: -1;
 }
 
 .expertise-container:hover .card-bottom {
@@ -50,21 +52,23 @@
 
 #message {
 	opacity: 1;
+	z-index: 2;
 	/* --color : red; */
 	position: absolute;
 	width: 100%;
 	text-align: center;
-	top: 50%;
+	top: 60%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	font-size: 50px;
-	font-family: var(--code-font);
+	/* font-family: var(--code-font); */
+	font-weight: 400;
 	color: var(--dark-color);
 	background-color: var(--light-color);
 	border-top: 5px solid var(--dark-color);
 	border-bottom: 5px solid var(--dark-color);
 	cursor: default;
-	transition: 0.1s ease-in;
+	transition: opacity 0.1s ease-in;
 }
 
 .card {
@@ -154,6 +158,9 @@
 #secret-div {
 	opacity: 0;
 	color: var(--dark-color);
+	width: 80%;
+	max-width: 800px;
+	text-align: justify;
 }
 
 #secret-div.show {

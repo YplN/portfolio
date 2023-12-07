@@ -2,6 +2,7 @@ import ImgColumn from "../Generic/ImgColumn.jsx";
 import Section from "../Generic/Section.jsx";
 import TempDiv from "../Generic/TempDiv.jsx";
 import TwoColumns from "../Generic/TwoColumns.jsx";
+import Deplete from "./Deplete.jsx";
 import Gracoon from "./Gracoon.jsx";
 
 import "./Projects.css";
@@ -14,10 +15,7 @@ const Projects = () => {
 				right={<ImgColumn src={"img/gracoon/gracoon_gen.png"} />}
 			/>
 
-			<div id="wip">
-				<h3 className="subtitle">Work in Progress</h3>
-				<TempDiv>Deplete</TempDiv>
-			</div>
+			<TwoColumns right={<Deplete />} left={<TempDiv>Deplete</TempDiv>} />
 
 			<div id="others">
 				<h3 className="subtitle">Others</h3>

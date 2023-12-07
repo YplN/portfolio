@@ -52,17 +52,20 @@ const Expertise = () => {
 				))}
 				<div id="message"> HOVER TO REVEAL ! </div>
 			</div>
-			{
-				<div id="secret-div" className={isHover ? "show" : ""}>
-					Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro sequi
-					laboriosam cupiditate! Libero temporibus, veritatis, recusandae
-					voluptatibus deleniti vel distinctio, facilis aut voluptates
-					consequatur iste ad blanditiis id ex quas. Lorem ipsum dolor sit amet,
-					consectetur adipisicing elit. Aspernatur eveniet aut ut delectus ipsam
-					itaque eius quam eos facilis nesciunt quae obcaecati ab mollitia,
-					veniam sequi recusandae sapiente sunt dolores.
-				</div>
-			}
+			<div id="secret-div" className={isHover ? "show" : ""}>
+				<p>
+					Assigning a fixed "level of knowledge" to a coding language is, in my
+					opinion, like chasing a moving target. Learning in programming is
+					perpetual; there's always something new to discover. Moreover, coding
+					languages evolve over time with updates and additions, making any
+					static assessment outdated. The journey of mastering a language is
+					dynamic, a continuous exploration rather than a fixed destination.
+				</p>
+				<p>
+					So yeah, I guess my level could be set at, say, 70% (or maybe 1%?),
+					but what does it means "knowing 70%" of a coding language?
+				</p>
+			</div>
 		</Section>
 	);
 };

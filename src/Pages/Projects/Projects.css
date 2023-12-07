@@ -39,6 +39,7 @@
 	/* background-color: var(--light-color); */
 }
 
-#gracoon a {
+#gracoon a,
+#gracoon .short {
 	color: var(--light-color);
 }

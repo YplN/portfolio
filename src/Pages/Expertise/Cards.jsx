@@ -7,7 +7,7 @@ const ExpertiseBar = ({ name, color }) => {
 	useEffect(() => {
 		const valueInterval = setInterval(() => {
 			setValue(30 + Math.random() * 50);
-		}, 1500);
+		}, 700);
 		return () => clearInterval(valueInterval);
 	}, []);
 
