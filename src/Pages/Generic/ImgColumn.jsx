@@ -11,7 +11,11 @@ const ImgColumn = ({ src, onHover = () => {} }) => {
 		}
 	}, [isHover]);
 
-	return <img ref={imgRef} src={src} />;
+	return (
+		<div className="img-column-container">
+			<img ref={imgRef} src={src} />
+		</div>
+	);
 };
 
 export default ImgColumn;

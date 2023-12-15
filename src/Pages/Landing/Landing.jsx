@@ -34,7 +34,8 @@ const Landing = () => {
 				<TempDiv height="40px"> GitHub link, LinkedIn </TempDiv>
 			</div>
 			<div className="side-landing">
-				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+				<img id="logo" src="img/logo_lightv2.svg" />
+				{/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 					<path
 						fill="#e44d26"
 						d="M107.6 471l-33-370.4h362.8l-33 370.2L255.7 512"
@@ -48,7 +49,7 @@ const Landing = () => {
 						fill="#fff"
 						d="M369.6 176.3H255.8v45.4h109.6M361.3 268.2H255.8v45.4h56l-5.3 59-50.7 13.6v47.2l93-25.8"
 					/>
-				</svg>
+				</svg> */}
 			</div>
 		</div>
 	);

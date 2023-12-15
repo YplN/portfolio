@@ -1,9 +1,6 @@
 const Skill = ({ name, fill, color }) => {
 	return (
-		<div
-			className="skill vintage"
-			style={{ backgroundColor: fill, color: color }}
-		>
+		<div className="skill" style={{ backgroundColor: fill, color: color }}>
 			{name}
 		</div>
 	);
