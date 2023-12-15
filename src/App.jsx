@@ -3,6 +3,8 @@ import "./App.css";
 import Research from "./Pages/AboutMe/Research.jsx";
 import TagLine from "./Pages/AboutMe/TagLine.jsx";
 import TimeLine from "./Pages/AboutMe/TimeLine.jsx";
+import Contact from "./Pages/Contact/Contact.jsx";
+import Footer from "./Pages/Footer/Footer.jsx";
 import GenericCard from "./Pages/Generic/GenericCard.jsx";
 import ImgColumn from "./Pages/Generic/ImgColumn.jsx";
 import TempDiv from "./Pages/Generic/TempDiv.jsx";
@@ -337,7 +339,9 @@ const App = () => {
 			<TimeLine />
 			<Research />
 
-			{/* <Contact /> */}
+			<Contact />
+
+			<Footer />
 
 			{/* <SectionBis index={0} currentSection={currentSection} scrollY={scrollY}>
 				<Panels panels={panels} />
