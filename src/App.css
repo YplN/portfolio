@@ -289,6 +289,7 @@ nav a:hover:not(.active) {
 }
 
 .publications {
+	margin-top: 100px;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	/* grid-template-columns: 1fr; */
@@ -540,6 +541,7 @@ h2 {
 
 #projects {
 	padding-top: 100px;
+	margin-bottom: 50px;
 }
 
 #graph {
@@ -558,6 +560,14 @@ h2 {
 
 #graph canvas:hover {
 	border: 2px solid var(--dark-color);
+}
+
+#aboutMe {
+	padding-top: 100px;
+}
+
+#research {
+	padding-top: 50px;
 }
 
 #research .content {
