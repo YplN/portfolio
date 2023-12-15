@@ -7,11 +7,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Voltaire&display=swap");
 :root {
 	/* --light-color: #eee; */
-	--light-color: #f5f0ee;
+	--light-color: rgb(245, 240, 238);
 	--dark-color: #333;
 	/* --color-primary: #470317; */
-	--color-primary: #321600;
-	--new-dark: #453434;
+	--color-primary: rgb(50, 22, 0);
+	--new-dark: rgb(69, 52, 52);
 	--blue: #30dcff;
 	--orange: #ff9330;
 	--green: #8ee944;
@@ -66,6 +66,7 @@ body {
 	height: 100%;
 	flex-direction: column;
 	align-items: center;
+	max-width: var(--max-width);
 }
 
 #gracoonV2 {
@@ -539,4 +540,61 @@ h2 {
 
 #projects {
 	padding-top: 100px;
+}
+
+#graph {
+	/* width: calc(var(--max-width) / 2); */
+	width: 100%;
+}
+
+#graph canvas {
+	border-radius: 20px;
+	/* border: 2px solid var(--dark-color); */
+	/* margin: 2em; */
+	box-sizing: border-box;
+	transition: all 0.5s ease-in-out;
+	border: 2px solid var(--light-color);
+}
+
+#graph canvas:hover {
+	border: 2px solid var(--dark-color);
+}
+
+#research .content {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 2em;
+	margin-bottom: 2em;
+}
+
+#research .text {
+	flex: 1;
+}
+
+#research #graph {
+	flex: 1;
+}
+
+.link-bar {
+	width: 100%;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+.link-item-container {
+	width: 30px;
+	aspect-ratio: 1/1;
+	transition: all 0.2s ease;
+}
+
+.link-item-container:hover {
+	transform: translateY(-5px);
+}
+
+.link-item-container img {
+	width: 100%;
+	filter: saturate(0);
 }

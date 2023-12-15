@@ -1,6 +1,5 @@
-import TempDiv from "../Generic/TempDiv.jsx";
-
 import "./Landing.css";
+import LinkItem from "./LinkItem.jsx";
 
 const Landing = () => {
 	// See https://codepen.io/marcell0lopes/pen/oNemQmB
@@ -31,7 +30,18 @@ const Landing = () => {
 					<div>I'm Jocelyn.</div>
 					<div className="subtext"> I'm a web developer.</div>
 				</h1>
-				<TempDiv height="40px"> GitHub link, LinkedIn </TempDiv>
+				<div className="link-bar">
+					<LinkItem
+						href={"https://github.com/YplN"}
+						src={"assets/github.svg"}
+						alt={"GitHub Profile"}
+					/>
+					<LinkItem
+						href={"https://www.linkedin.com/in/jocelyn-thiebaut-431297130/"}
+						src={"assets/linkedin.png"}
+						alt={"LinkedIn Profile"}
+					/>
+				</div>
 			</div>
 			<div className="side-landing">
 				<img id="logo" src="img/logo_lightv2.svg" />

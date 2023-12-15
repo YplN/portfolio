@@ -1,11 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
-import DBLP from "./Pages/AboutMe/DBLP.jsx";
+import Research from "./Pages/AboutMe/Research.jsx";
 import TagLine from "./Pages/AboutMe/TagLine.jsx";
 import TimeLine from "./Pages/AboutMe/TimeLine.jsx";
 import GenericCard from "./Pages/Generic/GenericCard.jsx";
 import ImgColumn from "./Pages/Generic/ImgColumn.jsx";
-import Section from "./Pages/Generic/Section.jsx";
 import TempDiv from "./Pages/Generic/TempDiv.jsx";
 import TwoColumns from "./Pages/Generic/TwoColumns.jsx";
 import Landing from "./Pages/Landing/Landing.jsx";
@@ -44,15 +43,15 @@ import VisualStack from "./Pages/Projects/VisualStack.jsx";
 // 	);
 // };
 
-const Contact = () => {
-	return (
-		<Section className="vintage" id="contact">
-			<h2 className="title">Contact me</h2>
-			<TempDiv>blabla let's get in touch</TempDiv>
-			<TempDiv height="50px">links github, linkedin, x</TempDiv>
-		</Section>
-	);
-};
+// const Contact = () => {
+// 	return (
+// 		<Section className="vintage" id="contact">
+// 			<h2 className="title">Contact me</h2>
+// 			<TempDiv>blabla let's get in touch</TempDiv>
+// 			<TempDiv height="50px">links github, linkedin, x</TempDiv>
+// 		</Section>
+// 	);
+// };
 
 // function App() {
 // 	return (
@@ -336,8 +335,9 @@ const App = () => {
 
 			<h2>The Journey</h2>
 			<TimeLine />
-			<h2 id="research">Research</h2>
-			<DBLP />
+			<Research />
+
+			{/* <Contact /> */}
 
 			{/* <SectionBis index={0} currentSection={currentSection} scrollY={scrollY}>
 				<Panels panels={panels} />

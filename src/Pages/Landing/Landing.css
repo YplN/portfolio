@@ -16,6 +16,7 @@
 .greetings {
 	font-size: 75px;
 	text-align: left;
+	margin: 0.4em 0;
 }
 
 .subtext {
