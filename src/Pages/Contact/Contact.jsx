@@ -1,5 +1,6 @@
 import { ValidationError, useForm } from "@formspree/react";
 import React from "react";
+import Section from "../Generic/Section.jsx";
 
 const ContactForm = () => {
 	const [state, handleSubmit] = useForm("meqyjqpv");
@@ -66,10 +67,10 @@ const ContactForm = () => {
 
 const Contact = () => {
 	return (
-		<div id="contact">
+		<Section id="contact">
 			<h2>Contact me</h2>
 			<ContactForm />
-		</div>
+		</Section>
 	);
 };
 export default Contact;

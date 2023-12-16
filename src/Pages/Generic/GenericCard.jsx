@@ -8,7 +8,7 @@ const GenericCard = ({ id, src, title, subtitle }) => {
 			<div className="card-image-holder">
 				<img src={src} />
 			</div>
-			<div className="card-footer-container">Read more...</div>
+			{/* <div className="card-footer-container">Read more...</div> */}
 		</div>
 	);
 };

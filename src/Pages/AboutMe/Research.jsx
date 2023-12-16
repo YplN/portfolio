@@ -1,8 +1,9 @@
+import Section from "../Generic/Section.jsx";
 import DBLP from "./DBLP.jsx";
 
 const Research = () => {
 	return (
-		<div id="research">
+		<Section id="research">
 			<h2 id="research">Research</h2>
 			<div className="content">
 				<div className="text">
@@ -31,7 +32,7 @@ const Research = () => {
 				<div id="graph" />
 			</div>
 			<DBLP />
-		</div>
+		</Section>
 	);
 };
 

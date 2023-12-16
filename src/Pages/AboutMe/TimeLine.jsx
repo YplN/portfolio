@@ -58,21 +58,24 @@ const TimeLine = () => {
 	timelineData[currentImageIndex];
 
 	return (
-		<TwoColumns
-			id="time-line"
-			idLeft={"time-line-img"}
-			left={<ImgColumn src={imageSrc} />}
-			idRight={"time-line-text"}
-			right={
-				<div className="text">
-					{timelineData.map(({ id, text }) => (
-						<p key={id} ref={refs[id]}>
-							{text}
-						</p>
-					))}
-				</div>
-			}
-		/>
+		<>
+			<h2>The Journey</h2>
+			<TwoColumns
+				id="time-line"
+				idLeft={"time-line-img"}
+				left={<ImgColumn src={imageSrc} />}
+				idRight={"time-line-text"}
+				right={
+					<div className="text">
+						{timelineData.map(({ id, text }) => (
+							<p key={id} ref={refs[id]}>
+								{text}
+							</p>
+						))}
+					</div>
+				}
+			/>
+		</>
 	);
 };
 

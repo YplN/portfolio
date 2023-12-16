@@ -1,20 +1,30 @@
-import BentoGrid from "../Generic/BentoGrid.jsx";
-import { GracoonPresentation, GracoonVideo } from "./Gracoon.jsx";
-import "./Projects.css";
+import GenericCard from "../Generic/GenericCard.jsx";
+import Section from "../Generic/Section.jsx";
+
+// import "./Projects.css";
 const Projects = () => {
 	return (
-		<BentoGrid id="gracoon">
-			{/* <h2 className="title">Projects</h2> */}
+		<Section id="projects">
+			<GenericCard
+				id="gracoonV2"
+				src="img/gracoon/heart.png"
+				title="Gracoon"
+				subtitle="Featured project"
+			/>
 
-			<div className="project-logo">
-				<img src={"img/gracoon/gracoon_gen.png"} />
-				<img src={"img/gracoon/gracoon_gen.png"} />
-			</div>
-			{/* <GraCoOnTitle /> */}
-			{/* <GracoonStack /> */}
-			<GracoonPresentation />
-			<GracoonVideo />
-		</BentoGrid>
+			<GenericCard
+				id="depleteV2"
+				src="img/deplete/deplete.png"
+				title="Deplete"
+				subtitle="Upcoming project"
+			/>
+			<GenericCard
+				id="stackV2"
+				src="img/visual_stack/linked.png"
+				title="DataStructure"
+				subtitle="Some more"
+			/>
+		</Section>
 	);
 };
 
