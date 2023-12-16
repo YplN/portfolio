@@ -18,7 +18,7 @@ const Landing = () => {
 							<br />
 						</span>
 					</div>
-					<div>I'm Jocelyn.</div>
+					<div id="jojo">I'm Jocelyn.</div>
 					<div className="subtext"> I'm a web developer.</div>
 				</h1>
 

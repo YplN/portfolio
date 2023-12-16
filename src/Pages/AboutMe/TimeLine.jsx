@@ -12,7 +12,7 @@ const timelineData = [
 	{
 		id: "orleans",
 		imageSrc: "img/about_me/orleans.jpg",
-		text: "In 2019, I relocated to Orléans, France, taking on a role as a Temporary Lecturer at the University. Amidst the COVID-19 Pandemic, teachers, including myself, had to swiftly adapt to remote teaching...",
+		text: "In 2019, I relocated to Orléans, France, taking on a role as a Temporary Lecturer at the University. Amidst the COVID-19 Pandemic, teachers, including myself, had to swiftly adapt to remote teaching. This prompted me to explore solutions for providing students with the best possible learning experience using available technology. Consequently, I began developing semi-autodidactically, crafting simple webpages to assist students, such as in manipulating data structures.",
 	},
 	{
 		id: "prague",
