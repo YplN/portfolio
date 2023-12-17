@@ -61,6 +61,10 @@ function setup() {
 	var canvasDiv = document.getElementById("graph");
 	var width = canvasDiv.offsetWidth;
 
+	for (let element of document.getElementsByClassName("p5Canvas")) {
+		element.addEventListener("contextmenu", (e) => e.preventDefault());
+	}
+
 	let canvas = createCanvas(width, 400);
 	canvas.parent("graph");
 	BACKGROUND_COLOR = color(25, 25, 25);
