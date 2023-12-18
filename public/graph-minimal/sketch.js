@@ -110,7 +110,7 @@ function draw() {
 		textFont("Outfit");
 		textAlign("center");
 		text(
-			"Click and drag your mouse\nfrom a vertex to create a new edge",
+			"Click and drag your mouse from a vertex or\n an empty space to create a new edge",
 			width / 2,
 			0.8 * height
 		);
@@ -118,7 +118,7 @@ function draw() {
 	}
 
 	//
-	UpdateEgdes();
+	UpdateEdges();
 	showGraph();
 	drawSelectionBox(mouseX, mouseY, startSelectionX, startSelectionY);
 }
@@ -164,7 +164,7 @@ function showCreatingEdges() {
 	}
 }
 
-function UpdateEgdes() {
+function UpdateEdges() {
 	for (let i = Edges.length - 1; i >= 0; i--) {
 		if (Edges[i].toKill) {
 			Edges.splice(i, 1);
@@ -210,23 +210,6 @@ function selectVerticesFromBox(x1, y1, x2, y2) {
 		}
 	}
 	return sel;
-}
-
-function updateSelectMode() {
-	switch (modeSlider.value) {
-		case 0:
-			selectEdges = true;
-			selectVertices = false;
-			break;
-		case 1:
-			selectEdges = true;
-			selectVertices = true;
-			break;
-		case 2:
-			selectEdges = false;
-			selectVertices = true;
-			break;
-	}
 }
 
 function selectEdgesFromBox(x1, y1, x2, y2) {
@@ -325,6 +308,8 @@ function drawSelectionBox(x1, y1, x2, y2) {
 
 		// noFill();
 		fill(255, 10);
+
+		drawingContext.setLineDash([5, 5]);
 		stroke(DEFAULT_COLOR);
 		strokeWeight(2);
 

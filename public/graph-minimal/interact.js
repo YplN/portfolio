@@ -138,6 +138,7 @@ function mouseReleased() {
 }
 
 function keyPressed() {
+	loop();
 	if (keyCode == DELETE || keyCode == BACKSPACE) {
 		for (let e of selectedEdges) {
 			e.kill();
@@ -157,5 +158,6 @@ function keyPressed() {
 		centerVertices();
 	}
 
+	noLoop();
 	redraw();
 }
