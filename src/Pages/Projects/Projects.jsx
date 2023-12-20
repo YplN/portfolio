@@ -3,7 +3,7 @@ import Section from "../Generic/Section.jsx";
 
 // import "./Projects.css";
 
-const STACK = {
+export const STACK = {
 	REACT: {
 		id: "react",
 		src: "assets/react.svg",
@@ -24,9 +24,14 @@ const STACK = {
 		src: "assets/github.svg",
 		alt: "github",
 	},
+	HTML: {
+		id: "html",
+		src: "assets/html.svg",
+		alt: "html",
+	},
 };
 
-const PROJECTS = [
+export const PROJECTS = [
 	{
 		id: "gracoonV2",
 		src: "img/gracoon/heart.png",

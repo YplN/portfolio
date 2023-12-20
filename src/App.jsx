@@ -12,10 +12,12 @@ const App = () => {
 		<div className="app">
 			<NavBar />
 
+			{/* <GracoonCaseStudy /> */}
 			<Landing />
 			<Projects />
 			<AboutMe />
 			<Research />
+
 			<Contact />
 
 			<Footer />

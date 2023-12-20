@@ -26,6 +26,7 @@
 	-moz-osx-font-smoothing: grayscale;
 	line-height: 1.5;
 	font-weight: 400;
+	--font-size-title: 115px;
 	--font-size-h1: 85px;
 	--font-size-h2: 50px;
 	--font-size-subh2: 20px;
@@ -846,4 +847,365 @@ svg .svg-elem-8 {
 
 svg.active .svg-elem-8 {
 	stroke-dashoffset: 0;
+}
+
+.team-member-container {
+	border-radius: 50%;
+	border: 2px solid var(--color-primary);
+	position: relative;
+}
+
+.team-img-wrapper {
+	display: block;
+	width: 20px;
+	height: 20px;
+}
+
+.team-img-wrapper img {
+	display: block;
+	border-radius: 50%;
+	width: 100%;
+}
+
+.tooltip {
+	position: absolute;
+	top: -10px;
+	left: 50%;
+	transform: translate(-50%, -100%);
+	font-size: var(--font-size-subtext);
+	background-color: var(--color-primary);
+	text-align: center;
+	width: max-content;
+	padding: 0.15em 1em;
+	color: var(--light-color);
+	border-radius: 5px;
+	animation: 0.3s ease-out appear;
+}
+
+.tooltip span {
+	display: inline-block;
+	padding: 0.15em 0.25em;
+}
+
+@keyframes appear {
+	0% {
+		transform: translate(-50%, calc(-100% + 10px));
+		opacity: 0;
+	}
+	100% {
+		transform: translate(-50%, calc(-100%));
+		opacity: 1;
+	}
+}
+
+.header-element-content {
+	display: flex;
+	gap: 0.1em;
+}
+
+.project-header {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+.header-element-title {
+	margin-bottom: 0.2em;
+	font-weight: 600;
+}
+
+.header-element-container {
+	margin-bottom: 1em;
+	width: 200px;
+}
+
+.project-title {
+	font-size: var(--font-size-title);
+	font-family: "Voltaire", sans-serif;
+	font-weight: 700;
+	margin: 150px 0 100px 0;
+}
+
+.project-header-bar {
+	/* width: 200px; */
+	width: 100%;
+	display: flex;
+	justify-content: space-evenly;
+	flex-direction: row;
+	align-items: stretch;
+	/* position: fixed;
+	top: 100px;
+	left: 20px;
+	background-color: white;
+	padding: 1em;
+	border-radius: 20px; */
+}
+
+.img-comp-container {
+	position: relative;
+	max-width: var(--max-width);
+	/* max-width: 50%; */
+	margin: 0 auto;
+	/* height: 200px; */
+	/*should be the same height as the images*/
+}
+
+.img-comp-img {
+	/* position: relative; */
+	/* width: auto;
+	height: auto; */
+	overflow: hidden;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	bottom: 0;
+}
+
+.img-comp-overlay {
+	position: absolute;
+	/* filter: invert(1); */
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	bottom: 0;
+}
+
+.img-comp-img img {
+	display: block;
+	width: 100%;
+	-webkit-user-drag: none;
+	user-drag: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.img-comp-slider {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 3px;
+	z-index: 3;
+	/* cursor: ew-resize; */
+	background: rgba(40, 40, 40, 0.407);
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
+	/*set the appearance of the slider:*/
+	/* width: 40px;
+	height: 40px;
+	background-color: red;
+	opacity: 0.7;
+	border-radius: 50%; */
+}
+
+.slider {
+	background-color: var(--color-primary);
+	/* background-color: var(--light-color); */
+	/* background: rgb(40, 40, 40); */
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+	/* border: 2px solid var(--color-primary); */
+	position: absolute;
+	border-radius: 50%;
+	transform: scale(0.1);
+	height: 20px;
+	width: 20px;
+	left: -8px;
+	top: 50%;
+	z-index: 4;
+	opacity: 0;
+	transition: all 0.2s ease-in-out;
+}
+
+.img-comp-title {
+	text-align: center;
+	font-weight: 600;
+	background-color: var(--color-primary);
+	color: var(--light-color);
+}
+
+.pulse {
+	transform: scale(1);
+	opacity: 1;
+	animation: pulse-animation 2s infinite;
+}
+
+@keyframes pulse-animation {
+	0% {
+		box-shadow: 0 0 0 0px rgba(0, 0, 0, 1);
+	}
+	100% {
+		box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+	}
+}
+
+.temp-div {
+	border: 3px solid black;
+}
+
+.expendable {
+	width: 50%;
+	background-color: rgba(255, 255, 255, 0.699);
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 2em 2em;
+	font-weight: 600;
+	cursor: pointer;
+	position: relative;
+}
+
+.expendable:hover .question-mark img {
+	opacity: 1;
+}
+
+.expendable.expended {
+	width: 80%;
+	cursor: default;
+	margin: 0 auto;
+	font-weight: 400;
+	display: flex;
+}
+
+.expendable.expended .content {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.close {
+	/* background-color: red; */
+	cursor: pointer;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
+.close-svg {
+	fill: var(--color-primary);
+}
+
+.graph-problem {
+	width: 80%;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.switch {
+	display: flex;
+	cursor: pointer;
+}
+
+.switch-container {
+	position: relative;
+}
+
+.switch-title {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+.question-mark {
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	right: 20px;
+	width: 30px;
+	height: 30px;
+}
+
+.question-mark img {
+	width: 100%;
+	opacity: 0.55;
+	transition: all 0.3s ease-in-out;
+}
+
+.parameters-list {
+	display: flex;
+	gap: 1em;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	margin: 1em;
+	min-height: 250px;
+}
+
+.card-parameter-container {
+	width: 200px;
+	background-color: rgba(255, 255, 255, 0.514);
+	padding: 1em;
+	border-radius: 10px;
+}
+
+.card-parameter-title {
+	font-weight: 600;
+	text-transform: uppercase;
+	text-align: center;
+	height: 50px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card-parameter-definition {
+	height: 0;
+	opacity: 0;
+	transition: all 0.3s ease-in-out;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.card-parameter-definition.show {
+	height: 150px;
+	opacity: 1;
+}
+
+.bullet-image-container {
+	position: relative;
+	max-width: var(--max-width);
+}
+
+.bullet-image-container img {
+	width: 100%;
+}
+
+.bullet-container {
+	position: absolute;
+	z-index: 3;
+	width: 20px;
+	height: 20px;
+	overflow: visible;
+}
+
+.bullet {
+	width: 10px;
+	height: 10px;
+	background-color: var(--color-primary);
+	border-radius: 50%;
+	animation: pulse-animation 2s infinite;
+}
+
+.bullet-content {
+	opacity: 0;
+	visibility: hidden;
+	background-color: var(--color-primary);
+	/* border: 1px solid var(--light-color); */
+	padding: 1em;
+	color: var(--light-color);
+	border-radius: 10px;
+	transform: translate(-1em, 0.5em);
+	min-width: 100px;
+	transition: opacity 0.2s ease;
+}
+
+.bullet-content.show {
+	opacity: 1;
+	visibility: visible;
 }
