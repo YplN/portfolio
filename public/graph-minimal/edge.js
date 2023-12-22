@@ -9,8 +9,6 @@ class Edge {
 
 	kill() {
 		this.toKill = true;
-		this.v1.clearEdges();
-		this.v2.clearEdges();
 	}
 
 	setColor(c) {

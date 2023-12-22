@@ -134,11 +134,10 @@ function showGraph() {
 	for (let e of Edges) {
 		e.show();
 	}
-	showCreatingEdges();
-
 	for (let vertex of Vertices) {
 		vertex.show();
 	}
+	showCreatingEdges();
 }
 
 function showCreatingEdges() {
@@ -159,6 +158,8 @@ function showCreatingEdges() {
 		fakeEdge = new Edge(new Vertex(lmouseX, lmouseY, 1), fakeVertex);
 		fakeEdge.show();
 		fakeVertex.show();
+		lvertex.show();
+
 		fakeVertex = null;
 		fakeEdge = null;
 	}

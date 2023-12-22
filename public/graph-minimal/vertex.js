@@ -91,7 +91,6 @@ class Vertex {
 	clearEdges() {
 		for (var i = this.edges.length - 1; i >= 0; i--) {
 			if (this.edges[i].toKill) {
-				console.log("Removed");
 				this.edges.splice(i, 1);
 			}
 		}
