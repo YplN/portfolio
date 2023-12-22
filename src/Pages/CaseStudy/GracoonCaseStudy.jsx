@@ -2,9 +2,10 @@ import BulletImage from "../Generic/BulletImage.jsx";
 import CardParameter from "../Generic/CardParameter.jsx";
 import CompareImages from "../Generic/CompareImages.jsx";
 import Expendable from "../Generic/Expendable.jsx";
+import ImgColumn from "../Generic/ImgColumn.jsx";
 import Section from "../Generic/Section.jsx";
 import SwitchOnClick from "../Generic/SwitchOnClick.jsx";
-import TempDiv from "../Generic/TempDiv.jsx";
+import TwoColumns from "../Generic/TwoColumns.jsx";
 import { STACK } from "../Projects/Projects.jsx";
 import ProjectHeader from "./ProjectHeader.jsx";
 
@@ -14,7 +15,7 @@ const GracoonCaseStudy = () => {
 			<ProjectHeader
 				team={[
 					{ name: "Jocelyn Thiebaut", src: "img/logo_lightv2.svg" },
-					{ name: "Lucas Isenmann", src: "img/logo_lightv2.svg" },
+					{ name: "Lucas Isenmann", src: "img/people/lucas.png" },
 				]}
 				title="GraCoOn"
 				timeline="2022 - present"
@@ -29,7 +30,7 @@ const GracoonCaseStudy = () => {
 			<div className="screen-wrapper">
 				<img
 					className="screen"
-					src="img/gracoon/screen.png"
+					src="img/gracoon/screen2.png"
 					alt="Screenshot of Gracoon"
 				/>
 			</div>
@@ -150,7 +151,7 @@ const GracoonCaseStudy = () => {
 
 				<CompareImages
 					left={{ src: "img/gracoon/miro.png", alt: "Miro" }}
-					right={{ src: "img/gracoon/screen.png", alt: "gracoon" }}
+					right={{ src: "img/gracoon/comparison.png", alt: "gracoon" }}
 					title={
 						"Comparison between an actual screenshot of a research project we created on Miro vs on GraCoOn"
 					}
@@ -234,7 +235,6 @@ const GracoonCaseStudy = () => {
 						but we plan to provide a tool for the users to create their own
 						parameters.
 					</p>
-					<img src="img/gracoon/connected.png" alt="example of parameters" />
 					<div className="parameters-list">
 						<CardParameter
 							title="Vertex number"
@@ -245,40 +245,43 @@ const GracoonCaseStudy = () => {
 							title="Maximum degree"
 							definition="The highest number of edges connected to any single vertex in the graph."
 						/>
-						<CardParameter
+						{/* <CardParameter
 							title="Is the current drawing planar?"
 							definition="Determines whether the current drawing graph is drawn without any edges crossing each other."
-						/>
+						/> */}
 						<CardParameter
 							title="Is the graph connected?"
 							definition="Determines if there is a path between every pair of vertices, ensuring that every vertex is reachable from any other vertex in the graph."
 						/>
+						<CardParameter title="20 more..." definition="" disabled />
 					</div>
-					<TempDiv height="75px">
-						<p>
-							And all of this is done collaboratively, no need to sign-in or
-							anything. You go to the website, you share the link to your
-							friends, and you can start. Pretty cool, huh?
-						</p>
-					</TempDiv>
-					<TempDiv height="75px">
-						In fact, Miro can also be used to draw "graphs" not with the pencil
-						tool. It also allows the user to draw significantly faster graphs
-						since the tools are made for this specific purpose
-					</TempDiv>
-					<TempDiv>
-						Comparison side by side to draw a simple graph on Miro and on
-						GraCoOn
-					</TempDiv>
+					<TwoColumns
+						left={
+							<ImgColumn
+								src={"img/gracoon/parameter.png"}
+								alt="example of parameters"
+							/>
+						}
+						idLeft="parameter-img"
+						right={
+							<div>
+								<p>
+									This is an example on how we depict parameters. There are two
+									types of parameters: the ones with yes/no answers (showed as
+									green or red dots), and the ones with an answer as a number.
+								</p>
+								<p>
+									You can also apply a parameter to a subgraph (i.e. a part of a
+									sub-part of a graph). In the example here, the subgraph
+									correspond to the graph where the vertex out of the red
+									rectangle and all its incident edges are removed.
+								</p>
+							</div>
+						}
+					/>
 				</div>
 
 				<h2> More features </h2>
-
-				<div className="text">
-					<TempDiv height="75px">
-						Screenshot with all the features written as hoverable bullets
-					</TempDiv>
-				</div>
 
 				<BulletImage
 					img={{
@@ -287,22 +290,91 @@ const GracoonCaseStudy = () => {
 					}}
 					bullets={[
 						{
-							id: "feature1",
-							left: "10%",
-							top: "10%",
-							content: "test 10",
+							id: "people",
+							left: "5.5%",
+							top: "14.5%",
+							content: "List of people connected",
+							type: "light",
 						},
 						{
-							id: "feature2",
-							left: "50%",
-							top: "20%",
-							content: "test 20/50",
+							id: "generate",
+							left: "14.5%",
+							top: "16%",
+							content: "Generate automatically big graphs",
+							type: "light",
 						},
 						{
-							id: "feature3",
-							left: "99%",
-							top: "99%",
-							content: "test 20/50",
+							id: "grids",
+							left: "24.5%",
+							top: "16%",
+							content: "Display grid layouts to help with the drawing.",
+							type: "light",
+						},
+
+						{
+							id: "darkMode",
+							left: "34.5%",
+							top: "16%",
+							content: "Toggle dark mode",
+							type: "light",
+						},
+
+						{
+							id: "save",
+							left: "40%",
+							top: "16%",
+							content: "Save file to your computer",
+							type: "light",
+						},
+
+						// {
+						// 	id: "selection",
+						// 	left: "5.5%",
+						// 	top: "22.5%",
+						// 	content: "Selection tool",
+						// 	type: "light",
+						// },
+						// {
+						// 	id: "edgeMode",
+						// 	left: "5.5%",
+						// 	top: "30%",
+						// 	content: "Edge/Vertex tool (directed, undirected, or bend edges)",
+						// 	type: "light",
+						// },
+						{
+							id: "pencil",
+							left: "5.5%",
+							top: "36.5%",
+							content: "Pencil",
+							type: "light",
+						},
+						{
+							id: "color",
+							left: "5.5%",
+							top: "42.5%",
+							content: "Color element (edge or vertex)",
+							type: "light",
+						},
+						{
+							id: "subgraph",
+							left: "5.5%",
+							top: "48.5%",
+							content: "Define a subgraph",
+							type: "light",
+						},
+						{
+							id: "parameters",
+							left: "85%",
+							top: "15.5%",
+							content: "Add a new parameter",
+							type: "light",
+						},
+						{
+							id: "cursor",
+							left: "68.5%",
+							top: "47.5%",
+							content: "You can see the cursor position of the other people",
+							type: "light",
 						},
 					]}
 				/>

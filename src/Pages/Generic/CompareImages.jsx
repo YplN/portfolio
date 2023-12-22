@@ -45,7 +45,7 @@ const CompareImages = ({ left, right, width, height, title, initial = 70 }) => {
 					<div className={"slider " + (!isHover ? "pulse" : "")} />
 				</div>
 			</div>
-			{title && <div className="img-comp-title">{title}</div>}
+			{title ? <div className="img-comp-title">{title}</div> : null}
 		</div>
 	);
 };

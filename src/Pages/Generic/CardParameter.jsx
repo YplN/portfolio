@@ -1,13 +1,15 @@
 import { useState } from "react";
 
-const CardParameter = ({ title, definition }) => {
+const CardParameter = ({ title, definition, disabled = false }) => {
 	const [isExpended, setIsExpended] = useState(false);
 
+	const handleClick = () => {
+		if (!disabled) {
+			setIsExpended((p) => !p);
+		}
+	};
 	return (
-		<div
-			className="card-parameter-container"
-			onClick={() => setIsExpended((p) => !p)}
-		>
+		<div className="card-parameter-container" onClick={handleClick}>
 			<div className="card-parameter-title">{title}</div>
 
 			<div
