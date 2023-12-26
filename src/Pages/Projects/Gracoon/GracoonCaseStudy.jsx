@@ -1,13 +1,13 @@
-import BulletImage from "../Generic/BulletImage.jsx";
-import CardParameter from "../Generic/CardParameter.jsx";
-import CompareImages from "../Generic/CompareImages.jsx";
-import Expendable from "../Generic/Expendable.jsx";
-import ImgColumn from "../Generic/ImgColumn.jsx";
-import Section from "../Generic/Section.jsx";
-import SwitchOnClick from "../Generic/SwitchOnClick.jsx";
-import TwoColumns from "../Generic/TwoColumns.jsx";
-import { STACK } from "../Projects/Projects.jsx";
-import ProjectHeader from "./ProjectHeader.jsx";
+import ProjectHeader from "../ProjectHeader.jsx";
+import BulletImage from "../../Generic/BulletImage.jsx";
+import CardParameter from "../../Generic/CardParameter.jsx";
+import CompareImages from "../../Generic/CompareImages.jsx";
+import Expendable from "../../Generic/Expendable.jsx";
+import ImgColumn from "../../Generic/ImgColumn.jsx";
+import Section from "../../Generic/Section.jsx";
+import SwitchOnClick from "../../Generic/SwitchOnClick.jsx";
+import TwoColumns from "../../Generic/TwoColumns.jsx";
+import { STACK } from "../Projects.jsx";
 
 const GracoonCaseStudy = () => {
 	return (

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import Skill from "../Generic/Skill.jsx";
-import TempDiv from "../Generic/TempDiv.jsx";
+import Skill from "../../Generic/Skill.jsx";
+import TempDiv from "../../Generic/TempDiv.jsx";
 
 export const GraCoOnTitle = () => {
 	const [advance, setAdvance] = useState({
