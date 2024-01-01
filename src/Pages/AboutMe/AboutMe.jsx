@@ -14,7 +14,7 @@ const AboutMe = () => {
 				right={<ImgColumn src="img/about_me/pubius.png" />}
 				idLeft={"journey-text"}
 				idRight={"pua-img"}
-				id={"aboutMe"}
+				id={"aboutMeColumn"}
 			/>
 
 			<TimeLine />

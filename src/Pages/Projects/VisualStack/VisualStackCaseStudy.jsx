@@ -1,4 +1,3 @@
-import BulletImage from "../../Generic/BulletImage.jsx";
 import Expendable from "../../Generic/Expendable.jsx";
 import Section from "../../Generic/Section.jsx";
 import ProjectHeader from "../ProjectHeader.jsx";
@@ -170,7 +169,7 @@ const VisualStackCaseStudy = () => {
 							loop
 						>
 							<source
-								src="img/visual_stack/visual_queue.mp4"
+								src="img/visual_stack/visual_linked.mp4"
 								type="video/mp4"
 							/>
 							Your browser does not support the video tag.
@@ -185,105 +184,50 @@ const VisualStackCaseStudy = () => {
 						</div>
 					</div>
 				</div>
-
-				<h2> More features </h2>
-
-				<BulletImage
-					img={{
-						src: "img/gracoon/screen.png",
-						alt: "All the features of Gracoon",
-					}}
-					bullets={[
-						{
-							id: "people",
-							left: "5.5%",
-							top: "14.5%",
-							content: "List of people connected",
-							type: "light",
-						},
-						{
-							id: "generate",
-							left: "14.5%",
-							top: "16%",
-							content: "Generate automatically big graphs",
-							type: "light",
-						},
-						{
-							id: "grids",
-							left: "24.5%",
-							top: "16%",
-							content: "Display grid layouts to help with the drawing.",
-							type: "light",
-						},
-
-						{
-							id: "darkMode",
-							left: "34.5%",
-							top: "16%",
-							content: "Toggle dark mode",
-							type: "light",
-						},
-
-						{
-							id: "save",
-							left: "40%",
-							top: "16%",
-							content: "Save file to your computer",
-							type: "light",
-						},
-
-						// {
-						// 	id: "selection",
-						// 	left: "5.5%",
-						// 	top: "22.5%",
-						// 	content: "Selection tool",
-						// 	type: "light",
-						// },
-						// {
-						// 	id: "edgeMode",
-						// 	left: "5.5%",
-						// 	top: "30%",
-						// 	content: "Edge/Vertex tool (directed, undirected, or bend edges)",
-						// 	type: "light",
-						// },
-						{
-							id: "pencil",
-							left: "5.5%",
-							top: "36.5%",
-							content: "Pencil",
-							type: "light",
-						},
-						{
-							id: "color",
-							left: "5.5%",
-							top: "42.5%",
-							content: "Color element (edge or vertex)",
-							type: "light",
-						},
-						{
-							id: "subgraph",
-							left: "5.5%",
-							top: "48.5%",
-							content: "Define a subgraph",
-							type: "light",
-						},
-						{
-							id: "parameters",
-							left: "85%",
-							top: "15.5%",
-							content: "Add a new parameter",
-							type: "light",
-						},
-						{
-							id: "cursor",
-							left: "68.5%",
-							top: "47.5%",
-							content: "You can see the cursor position of the other people",
-							type: "light",
-						},
-					]}
-				/>
 			</Section>
+
+			<div id="mosaic">
+				<img
+					src="img/visual_stack/empty.png"
+					alt="Screenshot of an empty stack"
+					id="empty-img"
+				/>
+				<img
+					src="img/visual_stack/enfiler.png"
+					alt="Screenshot of how to add an element to the queue"
+					id="enfiler-img"
+				/>
+				{/* <img
+					src="img/visual_stack/history.png"
+					alt="Screenshot of the history of the events"
+					id="history-img"
+				/> */}
+				<img
+					src="img/visual_stack/list.png"
+					alt="Screenshot of a list"
+					id="list-img"
+				/>
+				<img
+					src="img/visual_stack/menu.png"
+					alt="Screenshot of the menu"
+					id="menu-img"
+				/>
+				<img
+					src="img/visual_stack/stacking.png"
+					alt="Screenshot of how to add an element to the stack"
+					id="stacking-img"
+				/>
+				<img
+					src="img/visual_stack/suc.png"
+					alt="Screenshot of linked list"
+					id="suc-img"
+				/>
+				<img
+					src="img/visual_stack/pancake.png"
+					alt="Screenshot of pancake sorting"
+					id="pancake-img"
+				/>
+			</div>
 		</div>
 	);
 };
