@@ -17,6 +17,7 @@ class Vertex {
 	}
 
 	show() {
+		drawingContext.setLineDash([]);
 		if (modern) {
 			noStroke();
 			fill(BACKGROUND_COLOR);
@@ -67,12 +68,6 @@ class Vertex {
 
 	addEdge(e) {
 		this.edges.push(e);
-
-		// console.log(this.toString() + '++++++++');
-		// for (e of this.edges) {
-		// 	console.log(e.toString());
-		// }
-		// console.log('______');
 	}
 
 	isAnExtremity(e) {
