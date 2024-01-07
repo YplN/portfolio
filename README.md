@@ -3,4 +3,5 @@
 ## TODO
 
 - dark mode
-- responsive mode
+- clean code
+- improve responsive

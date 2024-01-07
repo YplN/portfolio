@@ -1,4 +1,4 @@
-import Skill from "../Generic/Skill.jsx";
+import Skill from "../../Generic/Skill.jsx";
 
 const Deplete = () => {
 	return (

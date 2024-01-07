@@ -10,6 +10,7 @@ import Projects from "./Pages/Projects/Projects.jsx";
 
 import { useLayoutEffect } from "react";
 import { Link, Outlet, Route, Routes, useLocation } from "react-router-dom";
+import DepleteCaseStudy from "./Pages/Projects/Deplete/DepleteCaseStudy.jsx";
 import VisualStackCaseStudy from "./Pages/Projects/VisualStack/VisualStackCaseStudy.jsx";
 
 const Wrapper = ({ children }) => {
@@ -73,6 +74,11 @@ export default function App() {
 							path="/projects/data"
 							index
 							element={<VisualStackCaseStudy />}
+						/>
+						<Route
+							path="/projects/deplete"
+							index
+							element={<DepleteCaseStudy />}
 						/>
 					</Route>
 					<Route path="*" index element={<NoMatch />} />
