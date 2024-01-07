@@ -25,7 +25,7 @@ const Landing = () => {
 				<LinkBar />
 			</div>
 			<div className="side-landing">
-				<img id="logo" src="img/logo_lightv2.svg" />
+				<img id="logo" src="/portfolio/img/logo_lightv2.svg" />
 				{/* <img id="logo" src=" */}
 			</div>
 		</div>

@@ -12,7 +12,7 @@ const ImgColumn = ({ src, onHover = () => {} }) => {
 	}, [isHover]);
 
 	return (
-		<div className="img-column-container">
+		<div className="/portfolio/imgtfolio/img-column-container">
 			<img ref={imgRef} src={src} />
 		</div>
 	);

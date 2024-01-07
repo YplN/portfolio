@@ -159,7 +159,7 @@ const Gracoon = () => {
 				<GracoonStack />
 			</div>
 
-			{/* <img className="vintage" src={"img/gracoon/connected.png"} /> */}
+			{/* <img className="vintage" src={"/portfolio/imgtfolio/imgtfolio/img/gracoon/connected.png"} /> */}
 		</>
 	);
 };

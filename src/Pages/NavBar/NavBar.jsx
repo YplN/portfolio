@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
 	const [scrollY, setScrollY] = useState(0);
@@ -17,20 +19,24 @@ const NavBar = () => {
 	return (
 		<>
 			<nav className={scrollY < 100 ? "top" : ""}>
-				{/* <img src="img/logo_light.svg" id="logo" /> */}
+				{/* <img src="/portfolio/imgtfolio/img/logo_light.svg" id="logo" /> */}
 				<div className="links">
-					<a className="nav-item" href="#projects">
+					{" "}
+					<Link className="nav-item" to="/">
+						Home
+					</Link>
+					<Link className="nav-item" to="/projects">
 						Work
-					</a>
-					<a className="nav-item" href="#aboutMe">
+					</Link>
+					<Link className="nav-item" to="/about">
 						About
-					</a>
-					<a className="nav-item" href="#research">
+					</Link>
+					<Link className="nav-item" to="/research">
 						Research
-					</a>
-					<a className="nav-item" href="#contact">
+					</Link>
+					<HashLink className="nav-item" to="/#contact">
 						Contact
-					</a>
+					</HashLink>
 				</div>
 			</nav>
 		</>

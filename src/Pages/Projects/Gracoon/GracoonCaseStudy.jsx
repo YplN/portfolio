@@ -14,8 +14,8 @@ const GracoonCaseStudy = () => {
 		<div className="case-study" id="gracoon-case-study">
 			<ProjectHeader
 				team={[
-					{ name: "Jocelyn Thiebaut", src: "img/logo_lightv2.svg" },
-					{ name: "Lucas Isenmann", src: "img/people/lucas.png" },
+					{ name: "Jocelyn Thiebaut", src: "/portfolio/img/logo_lightv2.svg" },
+					{ name: "Lucas Isenmann", src: "/portfolio/img/people/lucas.png" },
 				]}
 				title="GraCoOn"
 				timeline="2022 - present"
@@ -30,7 +30,7 @@ const GracoonCaseStudy = () => {
 			<div className="screen-wrapper">
 				<img
 					className="screen"
-					src="img/gracoon/screen2.png"
+					src="/portfolio/img/gracoon/screen2.png"
 					alt="Screenshot of Gracoon"
 				/>
 			</div>
@@ -114,14 +114,14 @@ const GracoonCaseStudy = () => {
 								<SwitchOnClick
 									reveal={
 										<img
-											src="img/gracoon/solution.png"
+											src="/portfolio/img/gracoon/solution.png"
 											alt="solution"
 											className="graph-problem"
 										/>
 									}
 									base={
 										<img
-											src="img/gracoon/problem.png"
+											src="/portfolio/img/gracoon/problem.png"
 											alt="problem"
 											className="graph-problem"
 										/>
@@ -150,8 +150,11 @@ const GracoonCaseStudy = () => {
 				</div>
 
 				<CompareImages
-					left={{ src: "img/gracoon/miro.png", alt: "Miro" }}
-					right={{ src: "img/gracoon/comparison.png", alt: "gracoon" }}
+					left={{ src: "/portfolio/img/gracoon/miro.png", alt: "Miro" }}
+					right={{
+						src: "/portfolio/img/gracoon/comparison.png",
+						alt: "gracoon",
+					}}
 					title={
 						"Comparison between an actual screenshot of a research project we created on Miro vs on GraCoOn"
 					}
@@ -258,7 +261,7 @@ const GracoonCaseStudy = () => {
 					<TwoColumns
 						left={
 							<ImgColumn
-								src={"img/gracoon/parameter.png"}
+								src={"/portfolio/img/gracoon/parameter.png"}
 								alt="example of parameters"
 							/>
 						}
@@ -285,7 +288,7 @@ const GracoonCaseStudy = () => {
 
 				<BulletImage
 					img={{
-						src: "img/gracoon/screen.png",
+						src: "/portfolio/img/gracoon/screen.png",
 						alt: "All the features of Gracoon",
 					}}
 					bullets={[

@@ -6,17 +6,21 @@ import Section from "../Generic/Section.jsx";
 import TagLine from "./TagLine.jsx";
 import TimeLine from "./TimeLine.jsx";
 
+export const TagLineSection = () => {
+	return (
+		<TwoColumns
+			left={<TagLine />}
+			right={<ImgColumn src="/portfolio/img/about_me/pubius.png" />}
+			idLeft={"journey-text"}
+			idRight={"pua-img"}
+			id={"aboutMeColumn"}
+		/>
+	);
+};
 const AboutMe = () => {
 	return (
 		<Section id="aboutMe">
-			<TwoColumns
-				left={<TagLine />}
-				right={<ImgColumn src="img/about_me/pubius.png" />}
-				idLeft={"journey-text"}
-				idRight={"pua-img"}
-				id={"aboutMeColumn"}
-			/>
-
+			<TagLineSection />
 			<TimeLine />
 		</Section>
 	);

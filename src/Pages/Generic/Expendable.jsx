@@ -35,7 +35,7 @@ const Expendable = ({ expended, collapsed }) => {
 			) : (
 				<div className="expended-content-container">
 					<div className="question-mark" onClick={() => setIsExpended(false)}>
-						<img src="assets/question_mark.svg" alt="?" />
+						<img src="/portfolio/assets/question_mark.svg" alt="?" />
 					</div>
 					{collapsed}
 				</div>

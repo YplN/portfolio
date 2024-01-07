@@ -7,7 +7,9 @@ const VisualStackCaseStudy = () => {
 	return (
 		<div className="case-study" id="stack-case-study">
 			<ProjectHeader
-				team={[{ name: "Jocelyn Thiebaut", src: "img/logo_lightv2.svg" }]}
+				team={[
+					{ name: "Jocelyn Thiebaut", src: "/portfolio/img/logo_lightv2.svg" },
+				]}
 				title="DataStructures"
 				timeline="2020"
 				role="UI/UX designer, Front End Developer"
@@ -21,14 +23,13 @@ const VisualStackCaseStudy = () => {
 			<div className="screen-wrapper">
 				<img
 					className="screen"
-					src="img/visual_stack/stack_screen.png"
+					src="/portfolio/img/visual_stack/stack_screen.png"
 					alt="Screenshot of Visual Stack"
 				/>
 			</div>
 
 			<Section id="stack-case-study">
 				<h2> Context </h2>
-
 				<div className="text">
 					<p>
 						DataStructure is a series of small projects I created while I was
@@ -92,17 +93,14 @@ const VisualStackCaseStudy = () => {
 						}
 					/>
 				</div>
-
-				{/* <CompareImages
-					left={{ src: "img/gracoon/miro.png", alt: "Miro" }}
-					right={{ src: "img/gracoon/comparison.png", alt: "gracoon" }}
+				{/* <CompareIma"/portfolio/img
+					left={{ src: "/portfolio/img/gracoon/miro.png", alt: "Miro" }}
+					right={{ src: "/portfolio/img/gracoon/comparison.png", alt: "gracoon" }}
 					title={
 						"Comparison between an actual screenshot of a research project we created on Miro vs on GraCoOn"
 					}
 				/> */}
-
 				<h2> The series </h2>
-
 				<div className="text">
 					<div id="data-structures-grid">
 						<video
@@ -112,8 +110,9 @@ const VisualStackCaseStudy = () => {
 							muted
 							loop
 						>
+							"/portfolio/img
 							<source
-								src="img/visual_stack/visual_stack.mp4"
+								src="/portfolio/img/visual_stack/visual_stack.mp4"
 								type="video/mp4"
 							/>
 							Your browser does not support the video tag.
@@ -142,8 +141,9 @@ const VisualStackCaseStudy = () => {
 							muted
 							loop
 						>
+							"/portfolio/img
 							<source
-								src="img/visual_stack/visual_queue.mp4"
+								src="/portfolio/img/visual_stack/visual_queue.mp4"
 								type="video/mp4"
 							/>
 							Your browser does not support the video tag.
@@ -168,8 +168,9 @@ const VisualStackCaseStudy = () => {
 							muted
 							loop
 						>
+							"/portfolio/img
 							<source
-								src="img/visual_stack/visual_linked.mp4"
+								src="/portfolio/img/visual_stack/visual_linked.mp4"
 								type="video/mp4"
 							/>
 							Your browser does not support the video tag.
@@ -188,42 +189,42 @@ const VisualStackCaseStudy = () => {
 
 			<div id="mosaic">
 				<img
-					src="img/visual_stack/empty.png"
+					src="/portfolio/img/visual_stack/empty.png"
 					alt="Screenshot of an empty stack"
 					id="empty-img"
 				/>
 				<img
-					src="img/visual_stack/enfiler.png"
+					src="/portfolio/img/visual_stack/enfiler.png"
 					alt="Screenshot of how to add an element to the queue"
 					id="enfiler-img"
 				/>
 				{/* <img
-					src="img/visual_stack/history.png"
+					src="/portfolio/img/visual_stack/history.png"
 					alt="Screenshot of the history of the events"
 					id="history-img"
 				/> */}
 				<img
-					src="img/visual_stack/list.png"
+					src="/portfolio/img/visual_stack/list.png"
 					alt="Screenshot of a list"
 					id="list-img"
 				/>
 				<img
-					src="img/visual_stack/menu.png"
+					src="/portfolio/img/visual_stack/menu.png"
 					alt="Screenshot of the menu"
 					id="menu-img"
 				/>
 				<img
-					src="img/visual_stack/stacking.png"
+					src="/portfolio/img/visual_stack/stacking.png"
 					alt="Screenshot of how to add an element to the stack"
 					id="stacking-img"
 				/>
 				<img
-					src="img/visual_stack/suc.png"
+					src="/portfolio/img/visual_stack/suc.png"
 					alt="Screenshot of linked list"
 					id="suc-img"
 				/>
 				<img
-					src="img/visual_stack/pancake.png"
+					src="/portfolio/img/visual_stack/pancake.png"
 					alt="Screenshot of pancake sorting"
 					id="pancake-img"
 				/>

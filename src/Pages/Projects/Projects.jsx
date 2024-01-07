@@ -1,3 +1,4 @@
+import { Outlet } from "react-router-dom";
 import GenericCard from "../Generic/GenericCard.jsx";
 import Section from "../Generic/Section.jsx";
 
@@ -6,27 +7,27 @@ import Section from "../Generic/Section.jsx";
 export const STACK = {
 	REACT: {
 		id: "react",
-		src: "assets/react.svg",
+		src: "/portfolio/assets/react.svg",
 		alt: "react",
 	},
 	NODEJS: {
 		id: "nodejs",
-		src: "assets/nodejs.svg",
+		src: "/portfolio/assets/nodejs.svg",
 		alt: "nodejs",
 	},
 	P5: {
 		id: "p5",
-		src: "assets/p5.svg",
+		src: "/portfolio/assets/p5.svg",
 		alt: "p5",
 	},
 	GITHUB: {
 		id: "github",
-		src: "assets/github.svg",
+		src: "/portfolio/assets/github.svg",
 		alt: "github",
 	},
 	HTML: {
 		id: "html",
-		src: "assets/html.svg",
+		src: "/portfolio/assets/html.svg",
 		alt: "html",
 	},
 };
@@ -34,7 +35,8 @@ export const STACK = {
 export const PROJECTS = [
 	{
 		id: "gracoonV2",
-		src: "img/gracoon/heart.png",
+		projectId: "gracoon",
+		src: "/portfolio/img/gracoon/heart.png",
 		title: "Gracoon",
 		subtitle: "Featured project",
 		stack: [
@@ -44,9 +46,10 @@ export const PROJECTS = [
 	},
 	{
 		id: "depleteV2",
-		src: "img/deplete/deplete.png",
+		projectId: "deplete",
+		src: "/portfolio/img/deplete/deplete.png",
 		title: "Deplete",
-		subtitle: "Upcoming project",
+		subtitle: "Upcoming",
 		stack: [
 			STACK.REACT,
 			{
@@ -57,7 +60,8 @@ export const PROJECTS = [
 	},
 	{
 		id: "stackV2",
-		src: "img/visual_stack/linked.png",
+		projectId: "data",
+		src: "/portfolio/img/visual_stack/linked.png",
 		title: "DataStructures",
 		subtitle: "Some more",
 		stack: [
@@ -69,18 +73,22 @@ export const PROJECTS = [
 
 const Projects = () => {
 	return (
-		<Section id="projects">
-			{PROJECTS.map((project) => (
-				<GenericCard
-					key={project.id}
-					id={project.id}
-					src={project.src}
-					title={project.title}
-					subtitle={project.subtitle}
-					stack={project.stack}
-				/>
-			))}
-		</Section>
+		<>
+			<Outlet />
+			<Section id="projects">
+				{PROJECTS.map((project) => (
+					<GenericCard
+						projectId={project.projectId}
+						key={project.id}
+						id={project.id}
+						src={project.src}
+						title={project.title}
+						subtitle={project.subtitle}
+						stack={project.stack}
+					/>
+				))}
+			</Section>
+		</>
 	);
 };
 
