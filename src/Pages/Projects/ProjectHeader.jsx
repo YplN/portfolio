@@ -20,6 +20,7 @@ const ProjectHeader = ({ title, timeline, team = [], role, stack }) => {
 								src={s.src}
 								style={s.style}
 								href={s.href}
+								active
 							/>
 						))}
 					</div>

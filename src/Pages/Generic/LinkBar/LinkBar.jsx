@@ -6,13 +6,15 @@ const SOCIALS = [
 		id: "github",
 		alt: "GitHub Profile",
 		src: "/portfolio/assets/github.svg",
+		active: true,
 	},
 
 	{
-		href: "https://www.linkedin.com/in/jocelyn-thiebaut-431297130/",
+		href: "https://www.linkedin.com/in/jocelyn-thiebaut",
 		id: "linkedin",
 		alt: "LinkedIn Profile",
 		src: "/portfolio/assets/linkedin.png",
+		active: true,
 	},
 ];
 
@@ -25,6 +27,7 @@ const LinkBar = () => {
 					href={item.href}
 					alt={item.alt}
 					src={item.src}
+					active={item.active}
 				/>
 			))}
 		</div>
